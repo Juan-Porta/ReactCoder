@@ -43,9 +43,21 @@ export const Products = () => {
           <Typography> {totalQuantity} </Typography>
         </Box>
       </Box>
-      <Typography fontSize={25} marginBottom={5} marginTop={5}  marginLeft={5} boxShadow={4}>
-        PORT-PRAY
-      </Typography>
+      <Typography
+  variant="h4"
+  sx={{
+    fontSize: 25,
+    marginBottom: 5,
+    marginTop: 5,
+    marginLeft: 5,
+    fontWeight: 'bold',
+    color: '#ff4081',
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+  }}
+>
+  PORT-PRAY
+</Typography>
+
       
       <Box component="div" display="flex" flexWrap="wrap" marginBottom={5} marginTop={5}  marginLeft={4}>
         {isLoading ? <h2>Cargando producto... por favor, espere.</h2> : products.map((product) => (
