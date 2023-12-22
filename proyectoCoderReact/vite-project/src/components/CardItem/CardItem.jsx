@@ -1,9 +1,9 @@
-import { Box, Button, Card, Typography, } from "@mui/material";
+import { Box, Button, Card, Typography,CardMedia } from "@mui/material";
 import { useCount } from "../../hooks";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-export const CardItem = ({ id, name, price, description, stock }) => {
+export const CardItem = ({ id, name, img, price, description, stock }) => {
 
   const { addItem } = useContext(CartContext);
 
@@ -11,6 +11,10 @@ export const CardItem = ({ id, name, price, description, stock }) => {
 
   return (
     <Card sx={{ maxWidth: 345, margin: 1, padding: 3 }}>
+    <CardMedia
+      component="img"
+      height="140"
+      image={img}/>
       <Typography variant="h5">{name}</Typography>
       <Typography color="text.secondary">{description}</Typography>
       <Typography color="text.secondary">Precio: ${price}</Typography>
